@@ -1,0 +1,3 @@
+[submodule "vga_clock"]
+	path = vga_clock
+	url = https://github.com/mattvenn/vga-clock
