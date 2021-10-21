@@ -24,6 +24,8 @@ set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 #set ::env(DIE_AREA) "0 0 300 300"
 #set ::env(FP_SIZING) absolute
 
+# make it taller to reach the power rails
+set ::env(FP_ASPECT_RATIO) 1.5
 set ::env(FP_CORE_UTIL) 49
 set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
 
