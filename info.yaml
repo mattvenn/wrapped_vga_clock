@@ -5,7 +5,6 @@ project:
   description: "shows the time on a 640x480 panel"
   author: "Matt Venn"
   picture: vga_clock/docs/vga_clock.jpg
-  github: todo
   license: LICENSE
 
 interfaces: ['la1', 'gpio']
