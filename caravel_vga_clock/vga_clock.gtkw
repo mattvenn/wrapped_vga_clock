@@ -1,0 +1,82 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Wed Oct 27 10:28:17 2021
+[*]
+[dumpfile] "/home/matt/work/asic-workshop/shuttle3-mpw-3/caravel_user_project/verilog/dv/caravel_vga_clock/vga_clock.vcd"
+[dumpfile_mtime] "Wed Oct 27 10:23:58 2021"
+[dumpfile_size] 165496051
+[savefile] "/home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_vga_clock/caravel_vga_clock/vga_clock.gtkw"
+[timestart] 0
+[size] 1850 884
+[pos] -1 -1
+*-26.000000 537500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] vga_clock_tb.
+[treeopen] vga_clock_tb.uut.
+[treeopen] vga_clock_tb.uut.mprj.
+[treeopen] vga_clock_tb.uut.mprj.wrapped_vga_clock_2.
+[sst_width] 626
+[signals_width] 302
+[sst_expanded] 1
+[sst_vpaned_height] 456
+@28
+vga_clock_tb.RSTB
+vga_clock_tb.clk
+vga_clock_tb.flash_clk
+vga_clock_tb.flash_csb
+vga_clock_tb.flash_io0
+vga_clock_tb.flash_io1
+@200
+-
+@28
+vga_clock_tb.uut.mprj.wrapped_vga_clock_2.wb_clk_i
+vga_clock_tb.uut.mprj.wrapped_vga_clock_2.active
+vga_clock_tb.uut.mprj.wrapped_vga_clock_2.vga_clock.hsync
+@22
+vga_clock_tb.uut.mprj.wrapped_vga_clock_2.vga_clock.rrggbb[5:0]
+@28
+vga_clock_tb.uut.mprj.wrapped_vga_clock_2.vga_clock.vsync
+@c00023
+vga_clock_tb.mprj_io[37:0]
+@28
+(0)vga_clock_tb.mprj_io[37:0]
+(1)vga_clock_tb.mprj_io[37:0]
+(2)vga_clock_tb.mprj_io[37:0]
+(3)vga_clock_tb.mprj_io[37:0]
+(4)vga_clock_tb.mprj_io[37:0]
+(5)vga_clock_tb.mprj_io[37:0]
+(6)vga_clock_tb.mprj_io[37:0]
+(7)vga_clock_tb.mprj_io[37:0]
+(8)vga_clock_tb.mprj_io[37:0]
+(9)vga_clock_tb.mprj_io[37:0]
+(10)vga_clock_tb.mprj_io[37:0]
+(11)vga_clock_tb.mprj_io[37:0]
+(12)vga_clock_tb.mprj_io[37:0]
+(13)vga_clock_tb.mprj_io[37:0]
+(14)vga_clock_tb.mprj_io[37:0]
+(15)vga_clock_tb.mprj_io[37:0]
+(16)vga_clock_tb.mprj_io[37:0]
+(17)vga_clock_tb.mprj_io[37:0]
+(18)vga_clock_tb.mprj_io[37:0]
+(19)vga_clock_tb.mprj_io[37:0]
+(20)vga_clock_tb.mprj_io[37:0]
+(21)vga_clock_tb.mprj_io[37:0]
+(22)vga_clock_tb.mprj_io[37:0]
+(23)vga_clock_tb.mprj_io[37:0]
+(24)vga_clock_tb.mprj_io[37:0]
+(25)vga_clock_tb.mprj_io[37:0]
+(26)vga_clock_tb.mprj_io[37:0]
+(27)vga_clock_tb.mprj_io[37:0]
+(28)vga_clock_tb.mprj_io[37:0]
+(29)vga_clock_tb.mprj_io[37:0]
+(30)vga_clock_tb.mprj_io[37:0]
+(31)vga_clock_tb.mprj_io[37:0]
+(32)vga_clock_tb.mprj_io[37:0]
+(33)vga_clock_tb.mprj_io[37:0]
+(34)vga_clock_tb.mprj_io[37:0]
+(35)vga_clock_tb.mprj_io[37:0]
+(36)vga_clock_tb.mprj_io[37:0]
+(37)vga_clock_tb.mprj_io[37:0]
+@1401201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
