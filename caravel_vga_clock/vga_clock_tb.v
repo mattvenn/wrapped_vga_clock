@@ -21,10 +21,10 @@
 `include "caravel_netlists.v"
 `include "spiflash.v"
 
-module project_tb;
+module vga_clock_tb;
     initial begin
-        $dumpfile ("project.vcd");
-        $dumpvars (0, project_tb);
+        $dumpfile ("vga_clock.vcd");
+        $dumpvars (0, vga_clock_tb);
         #1;
     end
 
@@ -79,7 +79,7 @@ module project_tb;
 	);
 
 	spiflash #(
-		.FILENAME("project.hex")
+		.FILENAME("vga_clock.hex")
 	) spiflash (
 		.csb(flash_csb),
 		.clk(flash_clk),

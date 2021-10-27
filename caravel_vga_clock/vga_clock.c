@@ -41,24 +41,47 @@ void main()
 
 	*/
 
-    // 1 input for input signal
-	reg_mprj_io_8 =   GPIO_MODE_USER_STD_INPUT_NOPULL;
+    /*
+    vga_clock vga_clock(
+        .clk(wb_clk_i),
+        .reset_n(la1_data_in[0]),
+        .adj_hrs(io_in[8]),
+        .adj_min(io_in[9]),
+        .adj_sec(io_in[10]),
+        .hsync(buf_io_out[11]),
+        .vsync(buf_io_out[12]),
+        .rrggbb(buf_io_out[18:13])
+        );
+    */
 
-    // 1 output for segments, starting at 9
-	reg_mprj_io_9 =   GPIO_MODE_USER_STD_OUTPUT;
+    // 3 inputs for buttons
+	reg_mprj_io_8  =   GPIO_MODE_USER_STD_INPUT_NOPULL;
+	reg_mprj_io_9  =   GPIO_MODE_USER_STD_INPUT_NOPULL;
+	reg_mprj_io_10 =   GPIO_MODE_USER_STD_INPUT_NOPULL;
+
+    // 8 outputs for 6bit colour and hsync/vsync
+	reg_mprj_io_11 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_12 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_13 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_14 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_15 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_16 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_17 =   GPIO_MODE_USER_STD_OUTPUT;
+	reg_mprj_io_18 =   GPIO_MODE_USER_STD_OUTPUT;
 
     /* Apply configuration */
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
 
-    // activate the project by setting the 1st bit of 2nd bank of LA - depends on the project ID
-    reg_la1_iena = 0; // input enable off
-    reg_la1_oenb = 0; // output enable on
-    reg_la1_data = 1 << 1;
+    // activate the project by setting the correct bit of 1st bank of LA - depends on the project ID
+    reg_la0_iena = 0; // input enable off
+    reg_la0_oenb = 0; // output enable on
+    reg_la0_data = 1 << 2;
 
-    // do something with the logic analyser
-    reg_la0_iena = 0;
-    reg_la0_oenb = 0;
-    reg_la0_data |= 100;
+    // reset the design
+    reg_la1_iena = 0;
+    reg_la1_oenb = 0;
+    reg_la1_data = 1;
+    reg_la1_data = 0;
 }
 
