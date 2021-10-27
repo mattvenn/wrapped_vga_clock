@@ -14,26 +14,22 @@ set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
     $::env(DESIGN_DIR)/vga_clock/rtl/VgaSyncGen.v"
 
 
-# target density, change this if you can't get your design to fit
-set ::env(PL_TARGET_DENSITY) 0.4
-
 # don't put clock buffers on the outputs, need tristates to be the final cells
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 
 # set absolute size of the die to 300 x 300 um
-#set ::env(DIE_AREA) "0 0 300 300"
-#set ::env(FP_SIZING) absolute
+set ::env(DIE_AREA) "0 0 220 220"
+set ::env(FP_SIZING) absolute
 
-# make it taller to reach the power rails
-set ::env(FP_ASPECT_RATIO) 1.5
-set ::env(FP_CORE_UTIL) 49
+set ::env(FP_CORE_UTIL) 40
 set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
 
 # define number of IO pads
 set ::env(SYNTH_DEFINES) "MPRJ_IO_PADS=38"
 
 # clock period is ns
-set ::env(CLOCK_PERIOD) "40"
+# need 40MHz for VGA out = 25ns
+set ::env(CLOCK_PERIOD) "30"
 set ::env(CLOCK_PORT) "wb_clk_i"
 
 # macro needs to work inside Caravel, so can't be core and can't use metal 5
