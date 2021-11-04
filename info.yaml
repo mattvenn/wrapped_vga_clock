@@ -19,8 +19,8 @@ caravel_test:
 
 # module test
 module_test:
-  recipe: "all" 
-  directory: "vga_clock"
+  recipe: "test" 
+  directory: "vga_clock/rtl"
   makefile: "Makefile"
 
 # run the wrapper formal proof
