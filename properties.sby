@@ -5,10 +5,19 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v rest of your source files.v
-prep -top wrapped_project
+read -formal wrapper.v button_pulse.v digit.v fontROM.v top.v vga_clock.v VgaSyncGen.v
+prep -top wrapped_vga_clock
 
 [files]
 wrapper.v
 properties.v
-rest of your source files.v
+vga_clock/rtl/button_pulse.v
+vga_clock/rtl/digit.v
+vga_clock/rtl/fontROM.v
+vga_clock/rtl/top.v
+vga_clock/rtl/vga_clock.v
+vga_clock/rtl/VgaSyncGen.v
+vga_clock/rtl/digit_index.hex
+vga_clock/rtl/col_index.hex
+vga_clock/rtl/color.hex
+vga_clock/rtl/font.list
