@@ -19,7 +19,7 @@ caravel_test:
 
 # module test
 module_test:
-  recipe: "test" 
+  recipe: "pngtest" 
   directory: "vga_clock/rtl"
   makefile: "Makefile"
 
