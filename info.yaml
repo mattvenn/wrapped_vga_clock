@@ -13,7 +13,7 @@ interfaces: ['la1', 'gpio']
 caravel_test:
   recipe: "coco_test"
   directory: "caravel_vga_clock"
-  id: 2
+  id: 1
   module_name: "wrapped_vga_clock"
   instance_name: "wrapped_vga_clock"
 
@@ -43,9 +43,9 @@ source:
     - vga_clock/rtl/VgaSyncGen.v
 
 # gds - check size = 300x300, nothing on metal 5, do a DRC, check 141 tristate buffers, check LVS
-gds:
-  directory: "gds"
-  gds_filename: "wrapped_vga_clock.gds"
-  lef_filename: "wrapped_vga_clock.lef"
-  lvs_filename: "wrapped_vga_clock.lvs.powered.v"
+final:
+  directory: "final"
+  gds_filename: "gds/wrapped_vga_clock.gds"
+  lef_filename: "lef/wrapped_vga_clock.lef"
+  lvs_filename: "verilog/gl/wrapped_vga_clock.v"
 

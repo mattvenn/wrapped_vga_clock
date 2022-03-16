@@ -15,13 +15,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "verilog/dv/caravel/defs.h"
+#include <defs.h>
+#include <stub.c>
 
 /*
 	IO Test:
 		- Configures MPRJ lower 8-IO pins as outputs
 		- Observes counter value through the MPRJ lower 8 IO pins (in the testbench)
 */
+
+#define PROJECT_ID 1
 
 void main()
 {
@@ -75,12 +78,12 @@ void main()
 
     // activate the project by setting the correct bit of 1st bank of LA - depends on the project ID
     reg_la0_iena = 0; // input enable off
-    reg_la0_oenb = 0; // output enable on
-    reg_la0_data = 1 << 2;
+    reg_la0_oenb = 0xffffffff; // output enable on
+    reg_la0_data = 1 << PROJECT_ID;
 
     // reset the design
     reg_la1_iena = 0;
-    reg_la1_oenb = 0;
+    reg_la1_oenb = 0xffffffff;
     reg_la1_data = 1;
     reg_la1_data = 0;
 }
