@@ -18,7 +18,7 @@ set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 
 # set absolute size of the die to 300 x 300 um
-set ::env(DIE_AREA) "0 0 220 220"
+set ::env(DIE_AREA) "0 0 230 230"
 set ::env(FP_SIZING) absolute
 
 set ::env(FP_CORE_UTIL) 40
@@ -43,3 +43,5 @@ set ::env(GND_NETS) [list {vssd1}]
 # regular pin order seems to help with aggregating all the macros for the group project
 #set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
+set ::env(FP_IO_VTHICKNESS_MULT) 4
+set ::env(FP_IO_HTHICKNESS_MULT) 4
